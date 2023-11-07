@@ -44,11 +44,23 @@ const getSignup = async (id) => {
       return error;
     }
   }; 
-
+//UPDATE 
+const updateSignup = async (id, signup) => {
+    try {
+      const updatedSignup = await db.one(
+        "UPDATE games SET name=$1, username=$2, bio=$3, category=$4 where id=$6 RETURNING *",
+        [signup.name, signup.username, signup.bio, signup.category,id]
+      );
+      return updatedSignup;
+    } catch (error) {
+      return error;
+    }
+  };
 
   module.exports = {
     getAllsignups,
     getSignup,
     createSignup,
     deleteSignup,
+    updateSignup,
   };
