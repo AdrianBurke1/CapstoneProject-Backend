@@ -10,3 +10,10 @@ CREATE TABLE signups (
  bio TEXT,
  category TEXT
 );
+
+DROP TABLE IF EXISTS prompts;
+CREATE TABLE prompts (
+id SERIAL PRIMARY KEY,
+category TEXT NOT NULL,
+prompt TEXT NOT NULL
+);
