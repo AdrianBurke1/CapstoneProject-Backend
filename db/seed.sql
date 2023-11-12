@@ -1,4 +1,3 @@
-
 \c signups_dev;
 
 INSERT INTO signups (name, username, bio, category) VALUES

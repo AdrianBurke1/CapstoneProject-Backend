@@ -1,6 +1,6 @@
 const db = require("../db/dbConfig");
 
-const getAllsignups = async () => {
+const getAllSignups = async () => {
     try {
       const allsignups = await db.any("SELECT * FROM signups");
       return allsignups;
@@ -21,7 +21,6 @@ const getSignup = async (id) => {
   // CREATE -> POST
   const createSignup = async (signup) => {
     try {
-        console.log("this is the user", signup)
       const newSignup = await db.one(
         "INSERT INTO signups (name, username, bio,category) VALUES($1, $2, $3, $4) RETURNING *",
         [signup.name, signup.username, signup.bio, signup.category]
@@ -58,7 +57,7 @@ const updateSignup = async (id, signup) => {
   };
 
   module.exports = {
-    getAllsignups,
+    getAllSignups,
     getSignup,
     createSignup,
     deleteSignup,

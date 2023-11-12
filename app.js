@@ -9,9 +9,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// MIDDLEWARE
-app.use(cors());
-app.use(express.json());
+//Signup Routes 
+const signupsController =  require("./controllers/signupControllers");
+app.use("/signups", signupsController);
+
 
 const promptsController = require("./controllers/promptsController.js");
 app.use("/prompts", promptsController);
@@ -20,9 +21,6 @@ app.get("/", (req, res) => {
   res.send(" MindfulMe App <3");
 });
 
-//Signup Routes 
-const signupsController =  require("./controllers/signupControllers");
-app.use("/signups", signupsController);
 
 // 404 PAGE
 app.get("*", (req, res) => {
