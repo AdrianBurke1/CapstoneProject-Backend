@@ -10,6 +10,7 @@ const getAllSignups = async () => {
   };
 // ONE USER 
 const getSignup = async (id) => {
+  console.log(getSignup)
     try {
       const oneSignup = await db.one("SELECT * FROM signups WHERE id=$1", id);
       return oneSignup;
@@ -58,8 +59,8 @@ const updateSignup = async (id, signup) => {
 
   module.exports = {
     getAllSignups,
-    getSignup,
     createSignup,
+    getSignup,
     deleteSignup,
     updateSignup,
   };
