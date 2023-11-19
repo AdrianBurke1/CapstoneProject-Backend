@@ -25,3 +25,12 @@ CREATE TABLE completed_prompts (
   prompts_id INT REFERENCES prompts(id),
   completion_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+
+DROP TABLE IF EXISTS roadmaps ;
+CREATE TABLE roadmaps (
+id SERIAL PRIMARY KEY,
+starting_point TEXT NOT NULL,
+destination TEXT NOT NULL,
+goal TEXT NOT NULL
+);
