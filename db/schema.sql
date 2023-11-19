@@ -17,3 +17,12 @@ id SERIAL PRIMARY KEY,
 category TEXT NOT NULL,
 prompt TEXT NOT NULL
 );
+
+
+DROP TABLE IF EXISTS roadmaps ;
+CREATE TABLE roadmaps (
+id SERIAL PRIMARY KEY,
+starting_point TEXT NOT NULL,
+destination TEXT NOT NULL,
+goal TEXT NOT NULL
+);
