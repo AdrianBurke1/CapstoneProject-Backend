@@ -13,6 +13,9 @@ app.use(express.json());
 const signupsController =  require("./controllers/signupControllers");
 app.use("/signups", signupsController);
 
+//Roadmap Routes  
+const roadmapController =  require("./controllers/roadmapController");
+app.use("/roadmaps", roadmapController);
 
 const promptsController = require("./controllers/promptsController.js");
 app.use("/prompts", promptsController);
