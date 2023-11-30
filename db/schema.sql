@@ -3,12 +3,21 @@ CREATE DATABASE signups_dev;
 
 \c signups_dev;
 
+-- CREATE TABLE signups (
+--  id SERIAL PRIMARY KEY,
+--  name TEXT NOT NULL,
+--  username TEXT NOT NULL,
+--  bio TEXT,
+--  category TEXT
+-- );
+
+
 CREATE TABLE signups (
  id SERIAL PRIMARY KEY,
- name TEXT NOT NULL,
- username TEXT NOT NULL,
- bio TEXT,
- category TEXT
+ first_name TEXT NOT NULL,
+ last_name TEXT NOT NULL,
+ email TEXT,
+ password TEXT
 );
 
 DROP TABLE IF EXISTS prompts;
