@@ -22,8 +22,8 @@ const getAllPrompts = async () => {
   const createPrompt = async (prompt) => {
     try {
       const newPrompt = await db.one(
-        "INSERT INTO prompts (category, prompt) VALUES($1, $2) RETURNING *",
-        [prompt.category, prompt.prompt]
+        "INSERT INTO prompts (category, prompt, title, type) VALUES($1, $2, $3, $4) RETURNING *",
+        [prompt.category, prompt.prompt, prompt.title, prompt.type]
       );
       return newPrompt;
     } catch (error) {
@@ -46,8 +46,8 @@ const getAllPrompts = async () => {
   const updatePrompt = async (id, prompt) => {
     try {
       const updatedPrompt = await db.one(
-        "UPDATE prompts SET category=$1, prompt=$2 WHERE id=$3 RETURNING *",
-        [prompt.category, prompt.prompt, id]
+        "UPDATE prompts SET category=$1, prompt=$2, title=$3, type=$4 WHERE id=$5 RETURNING *",
+        [prompt.category, prompt.prompt, prompt.title, prompt.type, id]
       );
       return updatedPrompt;
     } catch (error) {

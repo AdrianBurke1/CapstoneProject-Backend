@@ -7,9 +7,10 @@ const {
   deletePrompt,
   updatePrompt,
 } = require("../queries/prompts");
-debugger
+
 prompts.get("/", async (req, res) => {
   const allPrompts = await getAllPrompts();
+  console.log(allPrompts)
   if (allPrompts[0]) {
     res.status(200).json(allPrompts);
   } else {
