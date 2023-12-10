@@ -3,12 +3,13 @@ CREATE DATABASE signups_dev;
 
 \c signups_dev;
 
+
 CREATE TABLE signups (
  id SERIAL PRIMARY KEY,
- name TEXT NOT NULL,
- username TEXT NOT NULL,
- bio TEXT,
- category TEXT
+ first_name TEXT NOT NULL,
+ last_name TEXT NOT NULL,
+ email TEXT,
+ password TEXT
 );
 
 CREATE TABLE prompts (
@@ -24,4 +25,13 @@ CREATE TABLE completed_prompts (
   id INT REFERENCES signups(id),
   prompts_id INT REFERENCES prompts(id),
   completion_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+DROP TABLE IF EXISTS roadmaps ;
+CREATE TABLE roadmaps (
+id SERIAL PRIMARY KEY,
+starting_point TEXT NOT NULL,
+destination TEXT NOT NULL,
+goal TEXT NOT NULL
 );

@@ -1,6 +1,10 @@
-
 \c signups_dev;
 
+INSERT INTO signups (first_name, last_name, email, password) VALUES
+('Paola','Aracena','Pao@mindfulMe.com','aang123'),
+('Leliah','Spruill','Leliah@mindfulMe.com','toph456'),
+('Adrian','Burke','Adrian@mindfulMe.com','sokka789'),
+('Arius','Phillips','Arius@mindfulMe.com','suko1011');
 
 
 INSERT INTO prompts (category, prompt, title, type) VALUES
@@ -32,3 +36,9 @@ INSERT INTO prompts (category, prompt, title, type) VALUES
   ('Journaling','Reflect on your bedtime routine and sleep patterns for better sleep and overall health.','Mindful Sleep Journaling','Learning and Growth'),
   ('Journaling','Reflect on the events of the day and identify moments of joy, challenge, and personal growth.','Daily Reflections Journaling','Learning and Growth'),
   ('Journaling','Spend a few moments in silence and journal about your experience.','Mindful Silence Journaling','Emotional Awareness')
+
+
+INSERT INTO roadmaps (starting_point, destination, goal ) VALUES
+('come up with an idea','complete capstone','create wireframe'),
+('find your passion','get a new job', 'make a resume');
+

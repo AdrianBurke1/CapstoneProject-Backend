@@ -2,8 +2,8 @@ const express = require("express");
 const prompts = express.Router();
 const {
   getAllPrompts,
-  getPrompt, 
   createPrompt,
+  getPrompt, 
   deletePrompt,
   updatePrompt,
 } = require("../queries/prompts");
