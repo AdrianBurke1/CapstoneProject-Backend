@@ -19,6 +19,10 @@ app.use("/roadmaps", roadmapController);
 
 const promptsController = require("./controllers/promptsController.js");
 app.use("/prompts", promptsController);
+
+const postsController = require("./controllers/postsController");
+app.use("/posts", postsController);
+
 // ROUTES
 app.get("/", (req, res) => {
   res.send(" MindfulMe App <3");

@@ -35,3 +35,9 @@ starting_point TEXT NOT NULL,
 destination TEXT NOT NULL,
 goal TEXT NOT NULL
 );
+
+DROP TABLE IF EXISTS posts ;
+CREATE TABLE posts (
+id SERIAL PRIMARY KEY,
+description TEXT NOT NULL
+);
