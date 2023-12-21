@@ -35,7 +35,7 @@ INSERT INTO prompts (category, prompt, title, type) VALUES
   ('Journaling','Write about your experiences practicing mindfulness in your relationships, Reflect.','Mindful Relationships Journaling','Social Connection'),
   ('Journaling','Reflect on your bedtime routine and sleep patterns for better sleep and overall health.','Mindful Sleep Journaling','Learning and Growth'),
   ('Journaling','Reflect on the events of the day and identify moments of joy, challenge, and personal growth.','Daily Reflections Journaling','Learning and Growth'),
-  ('Journaling','Spend a few moments in silence and journal about your experience.','Mindful Silence Journaling','Emotional Awareness')
+  ('Journaling','Spend a few moments in silence and journal about your experience.','Mindful Silence Journaling','Emotional Awareness');
 
 
 INSERT INTO roadmaps (starting_point, destination, goal ) VALUES

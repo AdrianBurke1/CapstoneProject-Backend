@@ -28,7 +28,6 @@ CREATE TABLE completed_prompts (
 );
 
 
-DROP TABLE IF EXISTS roadmaps ;
 CREATE TABLE roadmaps (
 id SERIAL PRIMARY KEY,
 starting_point TEXT NOT NULL,
