@@ -35,7 +35,7 @@ INSERT INTO prompts (category, prompt, title, type) VALUES
   ('Journaling','Write about your experiences practicing mindfulness in your relationships, Reflect.','Mindful Relationships Journaling','Social Connection'),
   ('Journaling','Reflect on your bedtime routine and sleep patterns for better sleep and overall health.','Mindful Sleep Journaling','Learning and Growth'),
   ('Journaling','Reflect on the events of the day and identify moments of joy, challenge, and personal growth.','Daily Reflections Journaling','Learning and Growth'),
-  ('Journaling','Spend a few moments in silence and journal about your experience.','Mindful Silence Journaling','Emotional Awareness')
+  ('Journaling','Spend a few moments in silence and journal about your experience.','Mindful Silence Journaling','Emotional Awareness');
 
 
 INSERT INTO roadmaps (starting_point, destination, goal ) VALUES
@@ -43,6 +43,7 @@ INSERT INTO roadmaps (starting_point, destination, goal ) VALUES
 ('find your passion','get a new job', 'make a resume');
 
 INSERT INTO posts (description ) VALUES
-('Im feeling very hjaZhab aaqfnndja hafue '),
-('find your passion');
+('I took a break from my hectic schedule today to explore something I have always been curious about – photography. I borrowed a Adeles camera and wandered around campus capturing moments that caught my eye. It was refreshing to step away from the textbooks and embrace a creative outlet. - 1/2/2024, 8:47:25 AM'),
+('Today was a whirlwind of emotions and deadlines. College life is no joke. Balancing classes, assignments, and a part-time job is challenging, but I know it is a crucial part of my growth journey. I can feel the stress creeping in, but I also sense an opportunity for self-discovery. Maybe this chaos is the catalyst for finding balance and unlocking my true potential. I tried a new technique today to manage my time – breaking down tasks into smaller, manageable chunks. It helped, but there is  still room for improvement. Tomorrow is a new day, and I am determined to make it count. Here is to finding balance in the chaos. - 1/2/2024, 8:47:25 AM
+');
 
