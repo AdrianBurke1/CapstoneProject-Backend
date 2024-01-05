@@ -28,15 +28,11 @@ app.get("/", (req, res) => {
   res.send(" MindfulMe App <3");
 });
 
-
 // 404 PAGE
 app.get("*", (req, res) => {
   res.status(404).send("Page not found");
 });
 
-app.get("*", (req,res) => {
-  res.status(404).send("This is the Error Response")
-})
 
 
 // EXPORT

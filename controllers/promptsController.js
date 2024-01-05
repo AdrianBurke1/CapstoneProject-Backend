@@ -55,6 +55,7 @@ prompts.put("/:id", async (req, res) => {
   const { id } = req.params;
   const updatedPrompt = await updatePrompt(id, req.body);
   res.status(200).json(updatedPrompt);
+  console.log("Updated prompt:", updatedPrompt);
 });
 
 module.exports = prompts;
