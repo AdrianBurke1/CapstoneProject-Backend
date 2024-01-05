@@ -42,3 +42,7 @@ INSERT INTO roadmaps (starting_point, destination, goal ) VALUES
 ('come up with an idea','complete capstone','create wireframe'),
 ('find your passion','get a new job', 'make a resume');
 
+INSERT INTO posts (description ) VALUES
+('Im feeling very hjaZhab aaqfnndja hafue '),
+('find your passion');
+
