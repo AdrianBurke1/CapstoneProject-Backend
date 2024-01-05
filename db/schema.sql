@@ -31,9 +31,17 @@ goal TEXT NOT NULL
 );
 
 
+
 -- CREATE TABLE completed_prompts (
 --   completion_id SERIAL PRIMARY KEY,
 --   id INT REFERENCES signups(id),
 --   prompts_id INT REFERENCES prompts(id),
 --   completion_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 -- );
+
+DROP TABLE IF EXISTS posts ;
+CREATE TABLE posts (
+id SERIAL PRIMARY KEY,
+description TEXT NOT NULL
+);
+
