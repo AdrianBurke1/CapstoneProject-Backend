@@ -46,8 +46,8 @@ const getAllPrompts = async () => {
   const updatePrompt = async (id, prompt) => {
     try {
       const updatedPrompt = await db.one(
-        "UPDATE prompts SET category=$1, prompt=$2, title=$3, type=$4 WHERE id=$5 RETURNING *",
-        [prompt.category, prompt.prompt, prompt.title, prompt.type, id]
+        "UPDATE prompts SET category=$1, prompt=$2, title=$3, type=$4, response=$5, is_completed =$6, completion_date=$7 WHERE id=$8 RETURNING *",
+        [prompt.category, prompt.prompt, prompt.title, prompt.type, prompt.response, prompt.is_completed, prompt.completion_date, id]
       );
       return updatedPrompt;
     } catch (error) {
