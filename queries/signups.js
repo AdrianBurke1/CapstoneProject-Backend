@@ -10,6 +10,7 @@ const getAllSignups = async () => {
   };
 // ONE USER 
 const getSignup = async (id) => {
+  console.log(getSignup)
     try {
       const oneSignup = await db.one("SELECT * FROM signups WHERE id=$1", id);
       return oneSignup;
@@ -22,8 +23,8 @@ const getSignup = async (id) => {
   const createSignup = async (signup) => {
     try {
       const newSignup = await db.one(
-        "INSERT INTO signups (name, username, bio,category) VALUES($1, $2, $3, $4) RETURNING *",
-        [signup.name, signup.username, signup.bio, signup.category]
+        "INSERT INTO signups (first_name, last_name, email, password) VALUES($1, $2, $3, $4) RETURNING *",
+        [signup.first_name, signup.last_name, signup.email, signup.password]
       );
       return newSignup;
     } catch (error) {
@@ -47,8 +48,8 @@ const getSignup = async (id) => {
 const updateSignup = async (id, signup) => {
     try {
       const updatedSignup = await db.one(
-        "UPDATE games SET name=$1, username=$2, bio=$3, category=$4 where id=$6 RETURNING *",
-        [signup.name, signup.username, signup.bio, signup.category,id]
+        "UPDATE games SET first_name=$1, last_name=$2, email=$3, password=$4 where id=$6 RETURNING *",
+         [signup.first_name, signup.last_name, signup.email, signup.password,id]
       );
       return updatedSignup;
     } catch (error) {
@@ -58,8 +59,8 @@ const updateSignup = async (id, signup) => {
 
   module.exports = {
     getAllSignups,
-    getSignup,
     createSignup,
+    getSignup,
     deleteSignup,
     updateSignup,
   };

@@ -23,7 +23,7 @@ signups.get("/", async (req, res) => {
     const { id } = req.params;
     const signup = await getSignup(id);
     if (signup) {
-      res.json(signups);
+      res.json(signup);
     } else {
       res.status(404).json({ error: "not found" });
     }

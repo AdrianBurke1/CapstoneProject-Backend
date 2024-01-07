@@ -2,14 +2,15 @@ const express = require("express");
 const prompts = express.Router();
 const {
   getAllPrompts,
-  getPrompt, 
   createPrompt,
+  getPrompt, 
   deletePrompt,
   updatePrompt,
 } = require("../queries/prompts");
-debugger
+
 prompts.get("/", async (req, res) => {
   const allPrompts = await getAllPrompts();
+  console.log(allPrompts)
   if (allPrompts[0]) {
     res.status(200).json(allPrompts);
   } else {
@@ -54,6 +55,7 @@ prompts.put("/:id", async (req, res) => {
   const { id } = req.params;
   const updatedPrompt = await updatePrompt(id, req.body);
   res.status(200).json(updatedPrompt);
+  console.log("Updated prompt:", updatedPrompt);
 });
 
 module.exports = prompts;
