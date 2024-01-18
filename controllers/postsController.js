@@ -7,7 +7,7 @@ const {
     deletePost,
     updatePost,
 } = require("../queries/posts");
-debugger
+
 //INDEX
 posts.get("/", async (req, res) => {
     const allPosts = await getAllPosts();
